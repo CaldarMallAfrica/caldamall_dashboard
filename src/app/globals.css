@@ -1,0 +1,513 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Work+Sans:wght@300&display=swap');
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+body{
+  margin: 0;
+  padding: 0;
+  line-height: 1rem;
+  width: 100vw;
+  font-family: 'Nunito', sans-serif;
+}
+
+.dashboard_conatiner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.sidebar_container{
+  width: 22%;
+  height: 100vb;
+  padding-left: 5px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 5px 10px 0 rgba(63, 63, 63, 0.3);
+  padding: 30px;
+}
+
+.sidebar_nav{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500px;
+  gap: 16px;
+  padding: 15px 31px 15px 31px;
+  margin-bottom: 15px;
+}
+.sidebar_icon{
+  height: 24px;
+  width: 24px;
+}
+
+.arrow{
+  margin-left: 40px;
+}
+
+.ticket{
+  cursor: pointer;
+}
+.profile{
+margin-top: 40%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.profile > .users{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #E66700;
+  border-radius: 12px;
+  width: 270px;
+  height: 65px;
+  color: white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.profile > .users > .picture {
+  border-radius: 50px;
+}
+.profile > .users > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile > .users > div> h1{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+}
+.profile > .users > div > p{
+  font-weight: 400;
+  font-size: 14px;
+
+}
+.profile_nav{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.profile > .profile_nav .profile_setting{
+  width: 256px;
+  height: 54px;
+  border-radius: 8px;
+  background-color: #FFBC66;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  padding-left: 30px;
+  color: white;
+  cursor: pointer;
+}
+.profile > .profile_nav .profile_setting > h1{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+/*******Header*********/
+.header{
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px 0 rgba(63, 63, 63, 0.3);
+}
+.input_conatiner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 55px;
+  border-radius: 12px;
+  background: #f0f0f0;
+  padding: 10px 40px 10px 30px;
+}
+.input_conatiner > input{
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+.main_dashboard{
+  width: 78%;
+  height: 100vh;
+  padding: 30px;
+  overflow: scroll;
+}
+
+.greeting{
+  width: 100%;
+  height: 100px;
+  line-height: 2rem;
+}
+.greeting > p {
+  font-size: 14px;
+}
+
+.ticket_container{
+  display: flex;
+  flex-direction: row;
+  
+  align-items: center;
+  gap: 2rem;
+}
+
+.ticket_box1{
+  width: 449px;
+  height: 233px;
+  border-radius: 12px;
+  background-color: #080bff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 2rem;
+  color: white;
+}
+
+.ticket_box2{
+  width: 449px;
+  height: 233px;
+  border-radius: 12px;
+  background-color: #ff7d7d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 2rem;
+  color: white;
+}
+
+.sold{
+  line-height: 3rem;
+}
+
+.users_container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+.user_search{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search{
+  width: 430px;
+  height: 65px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 8px;
+  padding-left: 30px;
+}
+
+.search > input{
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  outline: none;
+}
+.user_search > h1{
+  font-weight: 700px;
+  font-size: 25px;
+}
+
+.table_container{
+  width: 100%;
+  margin-top: 30px;
+}
+
+table{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+thead{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+tbody {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: scroll;
+  height: 300px;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+tr{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+
+th{
+  width: 25%;
+  text-align: left;
+}
+
+td {
+  width: 25%;
+  text-align: left;
+}
+
+/** Sales*/
+.graph_container{
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 30px;
+  gap: 2rem;
+}
+
+.income_report{
+  width: 62%;
+  height: 307px;
+  box-shadow: 0px 5px 5px 0 rgba(63, 63, 63, 0.3);
+  border-radius: 16px;
+
+}
+
+.ticket_completion {
+  width: 38%;
+  height: 307px;
+  box-shadow: 0px 5px 5px 0 rgba(63, 63, 63, 0.3);
+  border-radius: 16px;
+}
+
+/** Available Tickets*/
+.ticket_heading{
+  font-size: 20px;
+  font-weight: 700;
+}
+.availble_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-top: 30px;
+  gap: 2rem;
+}
+
+.tickets{
+  width: 62%;
+  height: 307px;
+  box-shadow: 0px 5px 5px 0 rgba(63, 63, 63, 0.3);
+  border-radius: 16px;
+}
+.ticket_desc{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 2rem;
+  padding: 20px 50px 20px 50px;
+}
+.ticket_desc > .desc > p{
+  font-weight: 100;
+  font-size: 14px;
+}
+.remove_ticket{
+  color: red;
+  cursor: pointer;
+}
+.breakdown {
+  width: 30%;
+  height: 300px;
+  box-shadow: 0px 5px 5px 0 rgba(63, 63, 63, 0.3);
+  border-radius: 16px;
+  padding: 20px;
+}
+.breakdown > h1 {
+  font-size: 20px;
+  font-weight: 700px;
+  margin-bottom: 20px;
+}
+.breakdown{
+  font-weight: 700;
+  font-size: 20;
+}
+.ticket_summary{
+  width: 100%;
+  line-height: 2rem;
+}
+.ticket_summary > div{
+  display: flex;
+  height: 28px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ticket_summary > div > p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.ticket_image{
+  width: 100%;
+  height: 60%;
+  border-radius: 16px;
+}
+
+.ticket_image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px 16px 0 0px;
+}
+
+/***Add Ticket ***/
+
+.forms_container{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ margin-bottom: 20px;
+}
+
+.forms_container > div {
+  display: flex;
+  flex-direction: column;
+  width: 509px;
+  height: 100px;
+  border-radius: 8px;
+  line-height: 3rem;
+  margin-bottom: 30px;
+}
+.forms_container > div > input{
+  width: 100%;
+  height: 72px;
+  background-color: #F7F7F7;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+}
+
+.forms_container > div > label{
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.upload_container{
+  width: 100%;
+  height: 359px;
+  border-radius: 12px;
+  border: 2px solid #E66700;
+  border-style: dashed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 3rem;
+}
+
+.addTicket > h1 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+/****Notification*****/
+.notification_container{
+  line-height: 4rem;
+}
+.notification_container > h1{
+  font-weight: 700;
+  font-size: 20px;
+}
+.enable_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+}
+.toggle_container{
+  width: 60px;
+  height: 32px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+}
+
+.toggle_container > .rect{
+  width: 100%;
+  height: 20px;
+  background-color: #E2E2E2;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 36px;
+
+} 
+
+.toggle_container > .circle1 {
+  width: 33px;
+  height: 95%;
+  background-color: #CDCDCD;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.toggle_container > .circle2{
+  width: 33px;
+  height: 95%;
+  background-color: #E66700;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.enable_container > p {
+  font-weight: 400;
+  font-size: 18px;
+}
