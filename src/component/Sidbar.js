@@ -141,7 +141,7 @@ const Sidebar = () => {
                 {showSettings && (
                     <div className='profile_nav'>
                         {/* Settings Link */}
-                        <Link href="/" className='profile_setting'>
+                        <Link href="/profilesettings" className='profile_setting'>
                             <IoSettingsOutline className="sidebar_icon" />
                             <h1>Settings</h1>
                         </Link>

@@ -511,3 +511,42 @@ td {
   font-weight: 400;
   font-size: 18px;
 }
+
+/****Profile settings*****/
+.upload_field{
+  width: 354px;
+  height: 293px;
+  border-radius: 8px;
+  border: 2px solid #E66700;
+  border-style: dashed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+}
+.upload_field > p{
+  color: #E66700;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.upload_button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.upload_button > button {
+  width: 620px;
+  height: 72px;
+  background-color: #E66700;
+  color: white;
+  border-radius: 8px;
+}
+.profile_header{
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
