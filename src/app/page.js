@@ -2,12 +2,14 @@
 "use client"
 import { useEffect, useState } from "react"
 import style from "../component/signupCss/signup.module.css"
-import "./globals.css"
+//import "./globals.css"
 import axios from "axios"
-import { METHODS } from "http"
+import { useRouter } from "next/navigation"
+
 export default function Home() {
   const [showModal, setShowModal] = useState(false)
-  const [organisation_name, setOrganisation_name] = useState("")
+  const [ organisation_name, setOrganisation_name ] = useState("")
+  const route = useRouter()
  
   const modalHundle = () => {
     setShowModal(!showModal)
@@ -25,14 +27,12 @@ export default function Home() {
 
   const SignUpHundleSubmit = async() => {
     try {
-      const respose = await fetch("http://localhost:8000/api/organisation/registerOrganisation", {
-        method: "POST",
-        headers: customHeaders,
-        body: JSON.stringify({organisation_name})
-      })
-      // const response = await axios.post("/api/organisation/registerOrganisation", { organisation_name }, { headers: customHeaders })
-      // const data = await response
-      // console.log(data)
+      console.log(organisation_name)
+       const response = await axios.post("http://localhost:8000/api/organisation/registerOrganisation", { organisation_name:organisation_name }, { headers: customHeaders })
+      const data = await response
+      if (data.data.results.affectedRows === 1) {
+        route.push("/dashboard")
+      }
     } catch (error) {
       console.log(error)
     }
