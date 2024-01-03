@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/react-icons": "^3.0.0",
+    "axios": "^1.6.3",
     "ionicons": "^7.2.2",
     "next": "14.0.4",
     "react": "^18",
