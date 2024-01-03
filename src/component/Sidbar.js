@@ -64,7 +64,7 @@ const Sidebar = () => {
         <div className='sidebar_container'>
             <div className='navigations'>
                 {/* Overview Link */}
-                <Link href="/" className='sidebar_nav' style={bgStyle("overview")} onClick={() => changeBackground("overview")}>
+                <Link href="/dashboard" className='sidebar_nav' style={bgStyle("overview")} onClick={() => changeBackground("overview")}>
                     <IoHomeOutline className="sidebar_icon" />
                     <div>
                         <p>Overview</p>
@@ -72,7 +72,7 @@ const Sidebar = () => {
                 </Link>
 
                 {/* Sales Link */}
-                <Link href="/sales" className='sidebar_nav' style={bgStyle("sales")} onClick={() => changeBackground("sales")}>
+                <Link href="/dashboard/sales" className='sidebar_nav' style={bgStyle("sales")} onClick={() => changeBackground("sales")}>
                     <BsCart3 className="sidebar_icon" />
                     <div>
                         <p>Sales</p>
@@ -92,7 +92,7 @@ const Sidebar = () => {
                 {hideTicket && (
                     <div className='nav_hidden'>
                         {/* Available Tickets Link */}
-                        <Link href="/availableticket" className='sidebar_nav' style={bgStyle("availableticket")}>
+                        <Link href="/dashboard/availableticket" className='sidebar_nav' style={bgStyle("availableticket")}>
                             <CgProfile className="sidebar_icon" />
                             <div>
                                 <p>Available Tickets</p>
@@ -100,7 +100,7 @@ const Sidebar = () => {
                         </Link>
 
                         {/* Add Ticket Link */}
-                        <Link href="/addTicket" className='sidebar_nav' style={bgStyle("addTicket")}>
+                        <Link href="/dashboard/addTicket" className='sidebar_nav' style={bgStyle("addTicket")}>
                             <IoPersonAddOutline className="sidebar_icon" />
                             <div>
                                 <p>Add Tickets</p>
@@ -110,7 +110,7 @@ const Sidebar = () => {
                 )}
 
                 {/* Notification Link */}
-                <Link href="/notification" className='sidebar_nav' style={bgStyle("notification")} onClick={() => changeBackground("notification")}>
+                <Link href="/dashboard/notification" className='sidebar_nav' style={bgStyle("notification")} onClick={() => changeBackground("notification")}>
                     <IoMdNotificationsOutline className="sidebar_icon" />
                     <div>
                         <p>Notification</p>
@@ -141,13 +141,13 @@ const Sidebar = () => {
                 {showSettings && (
                     <div className='profile_nav'>
                         {/* Settings Link */}
-                        <Link href="/profilesettings" className='profile_setting'>
+                        <Link href="/dashboard/profilesettings" className='profile_setting'>
                             <IoSettingsOutline className="sidebar_icon" />
                             <h1>Settings</h1>
                         </Link>
 
                         {/* Logout Link */}
-                        <Link href="/" className='profile_setting'>
+                        <Link href="/dashboard" className='profile_setting'>
                             <IoIosArrowDropleft className="sidebar_icon" />
                             <h1>Logout</h1>
                         </Link>

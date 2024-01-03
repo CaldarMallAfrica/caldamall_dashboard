@@ -1,6 +1,7 @@
 import React from 'react'
-import Forms from "../../component/Forms"
-import ImageUpload from  "../../component/ImageUpload"
+import Forms from "../../../component/Forms"
+import ImageUpload from "../../../component/ImageUpload"
+
 const AddTicket= () => {
   return (
      <main className='main_dashboard'>

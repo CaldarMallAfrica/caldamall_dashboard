@@ -1,5 +1,5 @@
 import React from 'react'
-import AvailableTicketBox from "../../component/availableTicketBox"
+import AvailableTicketBox from "../../../component/availableTicketBox"
 const AvailableTicket = () => {
   return (
       <main className='main_dashboard'>

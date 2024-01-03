@@ -1,6 +1,6 @@
 import React from 'react'
 import Forms from '@/component/Forms'
-import SettingsForms from "../../component/settingsForms"
+import SettingsForms from "../../../component/settingsForms"
 const ProfileSettings = () => {
   return (
     <main className="main_dashboard">

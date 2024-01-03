@@ -1,8 +1,9 @@
 import React from 'react'
 import TicketBox from '@/component/TicketBox'
-import Graph from "../../component/graph"
+import Graph from "../../../component/graph"
 import Users from '@/component/Users'
 import Table from '@/component/Table'
+
 const Sales= () => {
   return (
      <main className="main_dashboard">
