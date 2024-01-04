@@ -15,16 +15,28 @@ const forms = () => {
             name:"location"
         },
         {
-            label: "Date",
-            type: "date",
+            label: "Starting date and time",
+            type: "datetime-local",
             placeholder: "Enter date",
             name:"date"
         },
         {
-            label: "Time",
-            type: "time",
+            label: "Ending date and time",
+            type: "datetime-local",
             placeholder: "Enter time",
             name:"time"
+        },
+        {
+            label: "Cost",
+            type: "number",
+            placeholder: "Enter price",
+            name:"cost"
+        },
+        {
+            label: "About",
+            type: "text",
+            placeholder: "About the event",
+            name:"about"
         }
     ]
   return (

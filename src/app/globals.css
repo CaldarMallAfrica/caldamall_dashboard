@@ -409,6 +409,7 @@ td {
  display: grid;
  grid-template-columns: 1fr 1fr;
  margin-bottom: 20px;
+ width: 100%;
 }
 
 .forms_container > div {

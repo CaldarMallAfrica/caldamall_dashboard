@@ -27,12 +27,16 @@ export default function Home() {
 
   const SignUpHundleSubmit = async() => {
     try {
+      if (organisation_name === "") {
+        alert("Organisation name required")
+        return false
+      }
       console.log(organisation_name)
        const response = await axios.post("http://localhost:8000/api/organisation/registerOrganisation", { organisation_name:organisation_name }, { headers: customHeaders })
       const data = await response
-      if (data.data.results.affectedRows === 1) {
-        route.push("/dashboard")
-      }
+    
+      route.push("/dashboard")
+     
     } catch (error) {
       console.log(error)
     }
@@ -53,7 +57,7 @@ export default function Home() {
         <div className={style.forms} >
           <div>
             <label>Organisation name</label>
-            <input onChange={OrgnanisationNameInputChange} type='text' name='organisation_name' placeholder='Organisation name' value={organisation_name}/>
+            <input onChange={OrgnanisationNameInputChange} type='text' name='organisation_name' placeholder='Organisation name' value={organisation_name} required/>
           </div>
           <button onClick={()=> SignUpHundleSubmit()} className={style.btn}>SignUp</button>
         </div>
